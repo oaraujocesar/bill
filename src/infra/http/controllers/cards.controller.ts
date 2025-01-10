@@ -4,14 +4,14 @@ import { Response } from 'express'
 import { CreateCardUseCase } from 'src/application/use-cases/card/create.use-case'
 import { CreateCardDoc } from '../decorators/doc/cards/create.doc'
 import { User } from '../decorators/user.decorator'
-import { CreateCardDto } from '../dtos/cards/create.dto'
+import { CreateCardDto } from '../dtos/card/create.dto'
 import { UserAuthenticated } from '../types/authenticated-request'
 
 @Controller('cards')
 @ApiTags('Cards')
 @ApiBearerAuth()
 export class CardsController {
-	constructor(private readonly createCardUseCase: CreateCardUseCase) {}
+	constructor(private readonly createCardUseCase: CreateCardUseCase) { }
 
 	private readonly logger = new Logger(CardsController.name)
 

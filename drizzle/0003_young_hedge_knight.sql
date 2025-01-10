@@ -1,0 +1,1 @@
+ALTER TABLE "family_members" ADD COLUMN "is_owner" boolean NOT NULL;

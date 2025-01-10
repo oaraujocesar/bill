@@ -1,7 +1,7 @@
 import { TestBed } from '@automock/jest'
 import { faker } from '@faker-js/faker'
 import { HttpStatus } from '@nestjs/common'
-import { Account } from 'src/application/entities/account'
+import { Account } from 'src/application/entities/account.entity'
 import { AccountRepository } from 'src/application/repositories/account.repository'
 import { UserAuthenticated } from 'src/infra/http/types/authenticated-request'
 import { ACCOUNT_REPOSITORY } from 'src/shared/tokens'

@@ -1,6 +1,6 @@
 import { faker } from '@faker-js/faker/.'
 import { isValid } from 'ulidx'
-import { Account } from './account'
+import { Account } from './account.entity'
 
 describe('Account entity', () => {
 	it('should create account', () => {

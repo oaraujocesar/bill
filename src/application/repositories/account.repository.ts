@@ -1,5 +1,5 @@
 import { ULID } from 'ulidx'
-import { Account } from '../entities/account'
+import { Account } from '../entities/account.entity'
 
 export interface AccountRepository {
 	saveAccount(account: Account): Promise<Account>

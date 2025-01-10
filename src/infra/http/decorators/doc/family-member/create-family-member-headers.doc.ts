@@ -1,11 +1,11 @@
 import { applyDecorators } from '@nestjs/common'
 import { ApiOkResponse, ApiOperation, ApiProperty } from '@nestjs/swagger'
-import { Account } from 'src/application/entities/account.entity'
+import { FamilyMember } from 'src/application/entities/family-member.entity'
 import { BadRequestResponse } from '../shared/bad-request-response.decorator'
 
 class OkResponse {
-	@ApiProperty({ type: [Account] })
-	data: Account[]
+	@ApiProperty({ type: FamilyMember })
+	data: FamilyMember
 
 	@ApiProperty()
 	statusCode: number
@@ -14,16 +14,15 @@ class OkResponse {
 	message: string
 }
 
-export function ListAccountsDoc() {
+export function CreateFamilyMemberDoc() {
 	return applyDecorators(
 		ApiOperation({
-			summary: 'List all accounts',
-			description: 'List all non deleted accounts for user',
+			summary: 'creates a family member',
 		}),
 		ApiOkResponse({
-			description: 'List of accounts',
+			description: 'Family member created successfully!',
 			type: OkResponse,
 		}),
-		BadRequestResponse({ errorMessage: 'User not found' }),
+		BadRequestResponse({ errorMessage: 'bad request.' }),
 	)
 }

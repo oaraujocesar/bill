@@ -1,4 +1,4 @@
-import { Account } from 'src/application/entities/account'
+import { Account } from 'src/application/entities/account.entity'
 
 export type DrizzleResultType = {
 	name: string

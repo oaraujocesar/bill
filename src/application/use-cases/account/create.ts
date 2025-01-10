@@ -1,5 +1,5 @@
 import { HttpStatus, Inject, Injectable, Logger } from '@nestjs/common'
-import { Account } from 'src/application/entities/account'
+import { Account } from 'src/application/entities/account.entity'
 import { AccountRepository } from 'src/application/repositories/account.repository'
 import { ACCOUNT_REPOSITORY } from 'src/shared/tokens'
 import { ResponseBody, buildResponse } from 'src/shared/utils/build-response'

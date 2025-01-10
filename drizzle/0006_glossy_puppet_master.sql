@@ -1,0 +1,1 @@
+ALTER TABLE "family_members" ALTER COLUMN "is_owner" DROP NOT NULL;
